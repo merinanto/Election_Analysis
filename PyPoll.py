@@ -21,10 +21,10 @@ with open(file_to_load) as election_data:
     headers = next(file_reader)
     print(headers)   
 
-    #  Initialize a total vote counter.
+    # Initialize a total vote counter.
     total_votes = 0 
     candidate_options = []
-    # Declare the empty dictionary.
+    #Declare the empty dictionary.
     candidate_votes = {}
     candidate_vote_per = {}
     winning_candidate = ""
@@ -42,15 +42,30 @@ with open(file_to_load) as election_data:
         else:
            #candidate_votes[candidate_name] =candidate_votes.get(candidate_name) +1  
            candidate_votes[candidate_name] +=1   
-# 3. Print the total votes.
+#Print the total votes.
 print(f"Total_votes:{total_votes}")
 print(candidate_options)
 print(candidate_votes)
 
-for name in candidate_votes:
+election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+print(election_results, end="")
+
+with open(file_to_save, "w") as txt_file:
+# Write some data to the file.
+    txt_file.write(election_results) 
+    
+
+    for name in candidate_votes:
             vote_percentage = round((candidate_votes[name]/total_votes)*100,2)
             #print(f"{candidate_name}: received {vote_percentage:.1f}% of the vote.")
-            print(f"{name}: {vote_percentage:.1f}% ({candidate_votes[name]:,})\n")
+            candidate_results=(f"{name}: {vote_percentage:.1f}% ({candidate_votes[name]:,})\n")
+            print(candidate_results)
+            # Write some data to the file.
+            txt_file.write(candidate_results) 
             if winning_count < candidate_votes[name]:
                 winning_count =candidate_votes[name]
                 winning_percentage = vote_percentage
@@ -58,17 +73,17 @@ for name in candidate_votes:
             #candidate_votes[name].append(percentage)
             #candidate_votes.setdefault(name,percentage)
             candidate_vote_per[name] =[candidate_votes[name],vote_percentage]
-winning_candidate_summary = (
+
+
+    winning_candidate_summary = (
     f"-------------------------\n"
     f"Winner: {winning_candidate}\n"
     f"Winning Vote Count: {winning_count:,}\n"
     f"Winning Percentage: {winning_percentage:.1f}%\n"
     f"-------------------------\n")
-print(winning_candidate_summary)            
-print(candidate_vote_per)
-with open(file_to_save, "w") as txt_file:
-# Write some data to the file.
-    txt_file.write("Hello World")
+    print(winning_candidate_summary)            
+    print(candidate_vote_per)
+    txt_file.write(winning_candidate_summary)
 win_candidate = max(candidate_vote_per, key=candidate_vote_per.get)
 print(win_candidate)
 
