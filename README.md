@@ -5,6 +5,8 @@
 A Colorado Board of Elections employee has given you the following tasks to complete the
 Election audit of a recent local congressional election.
 
+Script available at https://github.com/merinanto/Election_Analysis/blob/main/PyPoll_Challenge_code.py
+
 1.Calculate the total number of votes cast.
 2.Get a complete list of candidates who received votes.
 3.Calculate the total number of votes each candidate received.
@@ -32,9 +34,15 @@ The analysis of the election show that:
    Charles Casper Stockham: received 23.1% of the vote.
    Diana DeGette: received 73.8% of the vote.
    Raymon Anthony Doane: received 3.1% of the vote.
-
+  
  • The winner of the election was: 
-        Diana DeGette received 73.8% of the vote  and 272,892 votes has won the election                
+        Diana DeGette received 73.8% of the vote  and 272,892 votes has won the election    
+Analysis is updated at https://github.com/merinanto/Election_Analysis/tree/main/analysis
+Improvement:
+1. Type of the election to be audited can be added as improvement
+2. Instead of hardcording the candidate & county can be derived from the header.
+Updated code -https://github.com/merinanto/Election_Analysis/blob/main/PyPoll_Challenge_code_updated.py
+	
                
 
 
