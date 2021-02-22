@@ -38,6 +38,7 @@ The analysis of the election show that:
  • The winner of the election was: 
         Diana DeGette received 73.8% of the vote  and 272,892 votes has won the election    
 Analysis is updated at https://github.com/merinanto/Election_Analysis/tree/main/analysis
+
 Improvement:
 1. Type of the election to be audited can be added as improvement
 2. Instead of hardcording the candidate & county can be derived from the header.
