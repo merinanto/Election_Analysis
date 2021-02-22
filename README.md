@@ -42,7 +42,9 @@ The analysis of the election show that:
 • The candidates were:
     
   Charles Casper Stockham
+  
   Diana DeGette
+  
   Raymon Anthony Doane
       
 • The candidate results are:
