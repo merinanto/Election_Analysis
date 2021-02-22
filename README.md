@@ -20,7 +20,7 @@ Summary
 
 The analysis of the election show that:
 
-•	There are “x” votes cast in the election.
+•	There are  369,711 votes cast in the election.
 •	The candidates were:
     
   Charles Casper Stockham
@@ -34,7 +34,7 @@ The analysis of the election show that:
    Raymon Anthony Doane: received 3.1% of the vote.
 
  • The winner of the election was: 
-     Candidate who received of the vote  and votes has won the election                
+        Diana DeGette received 73.8% of the vote  and 272,892 votes has won the election                
                
 
 
